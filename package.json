@@ -1,0 +1,26 @@
+{
+  "name": "lab-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polink/lab-02-401n12-JS.git"
+  },
+  "keywords": [
+    "labs",
+    "classes",
+    "inheritance",
+    "functional",
+    "programming"
+  ],
+  "author": "Connor Sihon, Karl Polintan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polink/lab-02-401n12-JS/issues"
+  },
+  "homepage": "https://github.com/polink/lab-02-401n12-JS#readme"
+}
