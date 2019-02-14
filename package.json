@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/polink/lab-02-401n12-JS/issues"
   },
-  "homepage": "https://github.com/polink/lab-02-401n12-JS#readme"
+  "homepage": "https://github.com/polink/lab-02-401n12-JS#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "jest": "^24.1.0"
+  }
 }
