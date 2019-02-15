@@ -11,10 +11,10 @@ const Vehicle = function (name, wheels) {
     };
 };
 
-function Car(name)  {
+function Car (name) {
     const newCar = Object.assign(
         {},
-        new Vehicle(name, 4)
+        new Vehicle (name, 4)
     );
     return Object.freeze(newCar);
 }
@@ -31,4 +31,36 @@ function Motorcycle(name){
     return Object.freeze(newMotorcycle);
 }
 
-module.exports = {Car, Motorcycle};
+const FlyingVehicle = function (name, type) {
+    this.name = name;
+    this.type = type;
+    this.takeoff = () => {
+        return 'Takeoff!';
+    };
+    this.cruise = () => {
+        return 'Reaching cruising altitude.';
+    };
+    this.land = () => {
+        return 'Landing...';
+    };
+};
+
+function Airplane (name) {
+    const newAirplane = Object.assign(
+        new FlyingVehicle(name, 'Winged')
+    );
+    return Object.freeze(newAirplane);
+}
+
+function Helicopter (name) {
+    const newHelicopter = Object.assign(
+        {hover},
+        new FlyingVehicle(name, 'Rotorcraft')
+    );
+    function hover() {
+        return 'Maintaining hover position';
+    };
+    return Object.freeze(newHelicopter);
+}
+
+module.exports = {Car, Motorcycle, Airplane, Helicopter};
