@@ -3,15 +3,15 @@
 const Vehicle = function (name, wheels) {
     this.name = name;
     this.wheels = wheels;
-    function drive() {
+    this.drive = () => {
         return 'Moving Forward';
     };
-    function stop() {
+    this.stop = () => {
         return 'Stopping';
-    }
+    };
 };
 
-function CarFactory(name)  {
+function Car(name)  {
     const newCar = Object.assign(
         {},
         new Vehicle(name, 4)
@@ -19,15 +19,16 @@ function CarFactory(name)  {
     return Object.freeze(newCar);
 }
 
-function MotorcycleFactory(name){
-    const newBike = Object.assign(
+function Motorcycle(name){
+    const newMotorcycle = Object.assign(
         {},
+        {wheelie},
         new Vehicle(name, 2)
     );
-    return Object.freeze(newBike)
+    function wheelie() {
+        return 'Wheee!';
+    };
+    return Object.freeze(newMotorcycle);
 }
 
-module.exports = CarFactory;
-module.exports = MotorcycleFactory;
-
-
+module.exports = {Car, Motorcycle};

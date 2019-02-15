@@ -30,4 +30,37 @@ Motorcycle.prototype.wheelie = () => {
   return 'Wheee!';
 };
 
-module.exports = {Car, Motorcycle};
+const FlyingVehicle = function(name, type) {
+  this.name = name;
+  this.type = type;
+};
+
+FlyingVehicle.prototype.takeoff = () => {
+  return 'Takeoff!';
+};
+
+FlyingVehicle.prototype.cruise = () => {
+  return 'Reaching cruising altitude.';
+};
+
+FlyingVehicle.prototype.land = () => {
+  return 'Landing...';
+};
+
+const Airplane = function(name) {
+  FlyingVehicle.call(this, name, 'Winged');
+};
+
+Airplane.prototype = new FlyingVehicle();
+
+const Helicopter = function(name) {
+  FlyingVehicle.call(this, name, 'Rotorcraft');
+};
+
+Helicopter.prototype = new FlyingVehicle();
+
+Helicopter.prototype.hover = () => {
+  return 'Maintaining hover position.';
+};
+
+module.exports = {Car, Motorcycle, Airplane, Helicopter};

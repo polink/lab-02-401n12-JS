@@ -29,4 +29,35 @@ class Motorcycle extends Vehicle {
     }
 }
 
-module.exports = {Car, Motorcycle};
+class FlyingVehicle {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    };
+    takeoff() {
+        return 'Takeoff!';
+    };
+    cruise() {
+        return 'Reaching cruising altitude.';
+    };
+    land() {
+        return 'Landing...'
+    };
+}
+
+class Airplane extends FlyingVehicle {
+    constructor(name, type) {
+        super(name, 'Winged');
+    }
+}
+
+class Helicopter extends FlyingVehicle {
+    constructor(name, type) {
+        super(name, 'Rotorcraft');
+    }
+    hover() {
+        return 'Maintaining hover position.';
+    }
+}
+
+module.exports = {Car, Motorcycle, Airplane, Helicopter};
