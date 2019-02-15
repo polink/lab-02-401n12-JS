@@ -2,7 +2,7 @@
 
 // const FlyingVehicle = require('../vehicle-constructor');
 // const FlyingVehicle = require('../vehicle-class');
-const FlyingVehicle = require('../vehicle-factory');
+const FlyingVehicle = require('../factory');
 
 describe('Flying Vehicles', () => {
 
