@@ -1,12 +1,12 @@
 'use strict';
 
 
-// const Vehicle = require('./vehicle-constructor.js');
-// const FlyingVehicle = require('./vehicle-constructor.js');
-// const Vehicle = require('./vehicle-class.js');
-// const FlyingVehicle = require('./vehicle-class.js');
-const Vehicle = require('./vehicle-factory.js');
-const FlyingVehicle = require('./vehicle-factory.js');
+// const Vehicle = require('./constructor.js');
+// const FlyingVehicle = require('./constructor.js');
+// const Vehicle = require('./class.js');
+// const FlyingVehicle = require('./class.js');
+const Vehicle = require('./factory.js');
+const FlyingVehicle = require('./factory.js');
 
 
 // Implement a car and motorcycle
