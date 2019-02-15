@@ -11,7 +11,7 @@ const Vehicle = function (name, wheels) {
     }
 };
 
-function CarFactory(name) {
+function CarFactory(name)  {
     const newCar = Object.assign(
         {},
         new Vehicle(name, 4)
@@ -20,9 +20,14 @@ function CarFactory(name) {
 }
 
 function MotorcycleFactory(name){
-
+    const newBike = Object.assign(
+        {},
+        new Vehicle(name, 2)
+    );
+    return Object.freeze(newBike)
 }
 
 module.exports = CarFactory;
+module.exports = MotorcycleFactory;
 
 
