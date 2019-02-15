@@ -3,9 +3,10 @@
 
 // const Vehicle = require('./vehicle-constructor.js');
 // const FlyingVehicle = require('./vehicle-constructor.js');
-const Vehicle = require('./vehicle-class.js');
-const FlyingVehicle = require('./vehicle-class.js');
-// const Vehicle = require('./vehicle-factory.js');
+// const Vehicle = require('./vehicle-class.js');
+// const FlyingVehicle = require('./vehicle-class.js');
+const Vehicle = require('./vehicle-factory.js');
+const FlyingVehicle = require('./vehicle-factory.js');
 
 
 // Implement a car and motorcycle
