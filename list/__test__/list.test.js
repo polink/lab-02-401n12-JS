@@ -20,4 +20,11 @@ describe('List Data Structure', () => {
     expect(stuff.data[1]).toEqual('b');
   });
 
+  it('pops items off of the end of the list and returns them', () => {
+    let stuff = new List();
+    stuff.push('a');
+    stuff.push('b');
+    expect(stuff.pop()).toEqual('b');
+    expect(stuff.length).toEqual(1);
+  });
 });
