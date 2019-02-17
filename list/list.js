@@ -37,17 +37,40 @@ class List {
   }
 
   unshift(){
-    let returnValue=data[0];
+    let returnValue=this.data[0];
+    console.log(returnValue);
     for (let i in this.data){
-      this.data[i] = this.data[i+1];
+      this.data[i] = this.data[i];
+      console.log(this.data[i])
     }
-    return(returnValue);
-  }
+    this.length--;
+    console.log('shifted array'+this.data);
+    return (returnValue);
+  };
+
   forEach(functionIn){
     for (let i in this.data){
-      functionIn(this.data[i]);
-    };
+      let val=this.data[i];
+      this.data[i]=functionIn(val);
+    }
+  };
 
+  map(functionIn){
+    let outMap=new List();
+    for (let i in this.data){
+      outMap.push(functionIn(this.data[i]));
+    }
+    return outMap;
+  };
+
+  filter(functionIn){
+    let output = new List();
+    for (let i in this.data) {
+      if (functionIn(this.data[i])) {
+        output.push(this.data[i]);
+      }
+    }
+    return output;
   }
 
 }
