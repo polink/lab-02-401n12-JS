@@ -60,4 +60,29 @@ class Helicopter extends FlyingVehicle {
     }
 }
 
-module.exports = {Car, Motorcycle, Airplane, Helicopter};
+class SeaCreature {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+        this.delicious = () => {
+            return true;
+        }
+    };
+}
+
+class Fish extends SeaCreature {
+    constructor(name, type) {
+        super(name, 'swimmer');
+    }
+    swim() {
+        return 'Just keep swimming.'
+    }
+}
+
+class Lobster extends SeaCreature {
+    constructor(name, type) {
+        super(name, 'crawler');
+    }
+}
+
+module.exports = {Car, Motorcycle, Airplane, Helicopter, Fish, Lobster};

@@ -63,4 +63,37 @@ function Helicopter (name) {
     return Object.freeze(newHelicopter);
 }
 
-module.exports = {Car, Motorcycle, Airplane, Helicopter};
+const SeaCreature = function (name, type) {
+    this.name = name;
+    this.type = type;
+    this.delicious = () => {
+        return true;
+    };
+};
+
+function Fish (name, fins) {
+    const newFish = Object.assign(
+    // const newFish(name, 2) = Object.assign( try passing fins here?) 
+        {swim},
+
+        // {let fins = 2},
+
+        new SeaCreature(name, 'swimmer')
+    );
+    console.log(newFish)
+    function swim() {
+        return 'Just keep swimming.';
+    }
+    return Object.freeze(newFish);
+}
+
+function Lobster (name) {
+    let claws = 4;
+    let legs = 6;
+    const newLobster = Object.assign(
+        new SeaCreature(name, 'crawler')
+    );
+    return Object.freeze(newLobster);
+}
+
+module.exports = {Car, Motorcycle, Airplane, Helicopter, Fish, Lobster};

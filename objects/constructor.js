@@ -63,4 +63,14 @@ Helicopter.prototype.hover = () => {
   return 'Maintaining hover position.';
 };
 
+const SeaCreature = function(name) {
+  this.name = name;
+};
+
+const Fish = function(name) {
+    SeaCreature.call(this, name);
+}
+
+Fish.prototype = new SeaCreature();
+
 module.exports = {Car, Motorcycle, Airplane, Helicopter};
