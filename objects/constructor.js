@@ -63,14 +63,30 @@ Helicopter.prototype.hover = () => {
   return 'Maintaining hover position.';
 };
 
-const SeaCreature = function(name) {
+const SeaCreature = function(name, type) {
   this.name = name;
+  this.type = type;
+};
+
+SeaCreature.prototype.delicious = () => {
+  return true;
 };
 
 const Fish = function(name) {
-    SeaCreature.call(this, name);
+  SeaCreature.call(this, name, 'swimmer');
 }
 
 Fish.prototype = new SeaCreature();
 
-module.exports = {Car, Motorcycle, Airplane, Helicopter};
+Fish.prototype.swim = () => {
+  return 'Just keep swimming.'
+}
+
+const Lobster = function(name) {
+  SeaCreature.call(this, name, 'crawler');
+}
+
+Lobster.prototype = new SeaCreature();
+
+
+module.exports = {Car, Motorcycle, Airplane, Helicopter, Fish, Lobster};
