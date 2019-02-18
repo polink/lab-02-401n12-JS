@@ -3,6 +3,8 @@
 // --- Dependency Switcher ---
 // const Vehicle = require('./constructor.js');
 // const FlyingVehicle = require('./constructor.js');
+// const SeaCreature = require('./constructor.js');
+
 const Vehicle = require('./class.js');
 const FlyingVehicle = require('./class.js');
 const SeaCreature = require('./class.js');
