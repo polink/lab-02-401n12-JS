@@ -2,28 +2,52 @@
 ==============================================
 
 ## LAB 02
-[![Build Status](https://travis-ci.org/polink/cf-travis-deployment.svg?branch=master)](https://travis-ci.org/vladimirsan/cf-travis-deployment)
+[![Build Status](https://www.travis-ci.com/polink/lab-02-401n12-JS.svg?branch=master)](https://www.travis-ci.com/polink/lab-02-401n12-JS)
 
-### Author: Vinicio Sanchez
+### Authors:
+Connor Sihon
+
+Karl Polintan
 
 ### Links and Resources
-* [repo](https://github.com/vladimirsan/401n12-lab0)
-* [travis](https://travis-ci.com/vladimirsan/401n12-lab0)
-* [back-end](https://lab0-401n12.herokuapp.com/)
+* [repo](https://github.com/polink/lab-02-401n12-JS)
+* [travis](https://www.travis-ci.com/polink/lab-02-401n12-JS)
 
-### Modules
-#### `greet.js`
+### Object Modules
+#### `index.js`
+##### Exported Values and Methods
+N/A; only references other files.
+
+
+#### `constructor.js`
+#### `class.js`
+#### `factory.js`
+Combined functions below, as these files create the same objects, but go about it in different ways.
+
 ##### Exported Values and Methods
 
-###### `greet() -> string`
+###### `Vehicle(name, wheels)`
+###### `Vehicle.drive() -> 'Moving Forward.'`
+###### `Vehicle.stop() -> 'Stopping'`
+###### `Car -> new Vehicle`
+###### `Motorcycle -> new Vehicle`
+###### `Motorcycle.wheelie() -> 'Wheee!'`
+###### `FlyingVehicle(name, type)`
+###### `FlyingVehicle.takeoff -> 'Takeoff!'`
+###### `FlyingVehicle.cruise -> 'Reaching cruising altitude.'`
+###### `FlyingVehicle.land -> 'Landing...'`
+###### `Airplane -> new FlyingVehicle`
+###### `Helicopter -> new Vehicle`
+###### `Helicopter.hover -> 'Maintaining hover position.'`
+###### `SeaCreature(name, type)`
+###### `SeaCreature.delicious -> return true`
+###### `Fish -> new SeaCreature`
+###### `Fish.swim -> 'Just keep swimming.'`
+###### `Lobster -> new SeaCreature`
+###### Exported Objects: `Car, Motorcycle, Airplane, Helicopter, Fish, Lobster`
 
-#### `arithmetic.js`
-##### Exported Values and Methods
-
-###### `add(...numbers) -> number`
-###### `subtract(...numbers) -> number`
-###### `multiply(...numbers) -> number`
-###### `divide(...numbers) -> number`
+#### List Module
+#### `list.js`
 
 
 #### Tests
